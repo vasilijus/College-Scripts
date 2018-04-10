@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+<head>
+<style>
+select {
+	font-size:14px;
+}
+</style>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+<h1>Enter your DOB</h1>
+<script type="text/javascript">
+var Months = new Array();
+Months[0] = "January";
+Months[1] = "February";
+Months[2] = "March";
+Months[3] = "April";
+Months[4] = "May";
+Months[5] = "June";
+Months[6] = "July";
+Months[7] = "August";
+Months[8] = "September";
+Months[9] = "October";
+Months[10] = "November";
+Months[11] = "December";
+
+
+
+document.write('<select name = "day">');
+var i = 1;
+while ( i <= 31){
+	document.write('<option value =' + i + '>' + i + '</option>');
+	i++;
+}
+document.write('</select>');
+
+
+document.write('<select name = "month">');
+var j = 0;
+while ( j <= 11){
+	document.write('<option value =' + j + '>' + Months[j]  + '</option>');
+	j++;
+}
+document.write('</select>');
+
+
+document.write('<select name = "year">');
+var k = 1960;
+while (k <= 2015){
+	document.write('<option value = ' + k + '>' + k + '</option>');
+	k++;
+}
+document.write('</select>');
+
+</script>
+<h1>Select your car</h1>
+<script>
+var cars = new Array();
+cars[0] = "BMW";
+cars[1] = "Opel";
+cars[2] = "Mercedes";
+cars[3] = "SEAT";
+cars[4] = "FORD";
+
+document.write('<select name = "cars">');
+var c = 0;
+while ( c <=4){
+	document.write('<option value= ' + c + '>' + cars[c] + '</option>');
+	c++;
+}
+document.write('</select>');
+
+</script>
+<h1>Your local market</h1>
+
+<script type="text/javascript">
+var stores = new Array("Sains","Tesco","Coop");
+
+document.write('<select name= "store">');
+s = 0;
+while (s <=3){
+	document.write('<option value=' + s + '>' + stores[s] + '</option>');
+	s++;
+}
+	document.write('</select>');
+	
+</script>
+</body>
+</body>
+</html>

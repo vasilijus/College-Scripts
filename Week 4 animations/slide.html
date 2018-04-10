@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+//Create a function that will ensure your code loads after the webpage
+$(document).ready(function(){
+	//Select the ID="panel" and hide it
+	$("#panel").hide();
+	//Select the ID=" bar" and apply the click method
+	$("#bar").click(function(){
+		//Select the ID="panel" and fade it in at 4,000 milliseconds	
+		$("#panel").fadeIn(2000);
+	//Select the button and apply the Click method
+			$("button").click(function(){
+		//Select the ID="panel" and slide the elemnt up slowly
+			$("#panel").slideUp(2000);
+			});
+		});
+});
+</script>
+
+<style> 
+#panel, #bar {
+	text-align:center;
+	width:40%;
+	margin:auto;
+    padding:5px 0 5px 0;
+    text-align:center;
+    background-color:#CCC;
+    border: solid 1px #333;
+}
+
+#panel {
+    padding:40px 0 40px 0;
+}
+</style>
+</head>
+
+<body>
+
+<div id="bar"><p>Click to fade in</p></div>
+<div id="panel"><p>Click the Button!</p>
+	<button>To Slide Up</button>
+</div>
+
+</body>
+</html>

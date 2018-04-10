@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+
+<script>
+
+//Create a function and call it multiplyBy()
+//Create a variable called num1, use the document method to get the element by ID for "firstNumber"  and take the value
+
+//Create a variable called num2, use the document method to get the element by ID for "secondNumber"  and take the value
+
+//Research - innerHTML
+//Use the document method to get the element by ID of "result".innerHTML = NUM1 X NUM2
+function multiplyBy() {
+	var num1 = document.getElementById('firstNumber').value;
+	var num2 = document.getElementById('secondNumber').value;
+document.getElementById('result').innerHTML = num1 * num2;
+
+//Create a function and call it divideBy()
+
+}
+	function divideBy() {
+			var num1 = document.getElementById('firstNumber').value;
+			var num2 = document.getElementById('secondNumber').value;
+		document.getElementById('result').innerHTML = num1 / num2;
+	}
+//Create a variable called num1, use the document method to get the element by ID for "firstNumber"  and take the value
+
+//Create a variable called num2, use the document method to get the element by ID for "secondNumber"  and take the value
+
+//Use the document method to get the element by ID of "result".innerHTML = NUM1 ÷ NUM2
+
+</script>
+<!--Create a form-->
+<!--Creat an input type with an ID of "firstNumber"-->
+<!--Creat an input type with an ID of "secondNumber"-->
+<!--Create a button with a value of "Mutliply" which will call the "multiplyBy" function-->
+<!--Create a button with a value of "Divide" which will call the "divideBy" function-->
+<form>
+1st  Number <input  id="firstNumber"/> <br />
+2nd Number <input id="secondNumber"/> <br />
+<input type="button" value="Multiply" onClick="multiplyBy()"/ >
+<input type="button" value="Divide" onClick="divideBy()" />
+<p> The result is : <br /> <span id= "result" ></span></p>
+</form>
+<!--<p>The Result is : <br><span id = "result"></span></p> <----- This <span> tag will display the results-->
+
+<!--<img src="images/multiply.PNG" />
+<img src="images/divide.PNG" />-->
+
+</body>
+</html>

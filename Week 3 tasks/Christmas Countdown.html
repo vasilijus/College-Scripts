@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<script>
+//Declare a variable named today and assign it the value of the current date method
+
+//Declare a variable named christmas and assign it the value of the current date method inside the brackets add -
+
+//Create an if statement
+
+	//The condition of the if statement is - if todays month is equal to 11 and todays date is greater than 25
+	
+	//if the conditions are true then setfullyear to the christmas variable and inside the methods brackets you should getfullyear of christmas
+
+//After the if statement create a new variable call it one_day. this variable will hold the length of a day in milliseconds
+
+//Assign one_day with the value of 1000*60*60*24
+
+var today = new Date();
+
+var day = today.getDay();
+
+var cmas =  new Date(today.getFullYear(),11, 25);
+
+if (today.getMonth() == 11 && today.getDay() > 25 ) {
+	cmas.setFullYear(getFullYear(), 11, 25);
+	}
+	
+	var one_day = 60*60*24*1000 ;
+
+ 
+
+alert(Math.ceil((cmas.getTime() - today.getTime()) / (one_day)) + " days left until Christmas!");
+</script>
+
+</body>
+</html>

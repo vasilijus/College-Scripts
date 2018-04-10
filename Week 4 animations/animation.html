@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+//Create a function that will ensure your code loads after the webpage
+$(document).ready(function(e) {
+
+//Select the button tag and apply the click event method
+	$("button").click(function(){
+	//Select the ID="barOne" tag and animate it at a speed of 1,000 milliseconds
+		$("#barOne").animate({'width':'100%','height':'100px','opacity':'0.2'});
+	//the animation should make the width change to 100%, height to 100px and change the opactity to 20%		
+	});
+});
+</script>
+
+
+
+<style> 
+#barOne {
+	width:10%;
+	margin:0;
+	padding:0;
+    background-color:#CCC;
+	height:60px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div id="barOne"></div>
+
+<br />
+
+<button>Click to start</button>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<script>
+//Create a for loop
+//The initialisation of the for loop should be a variable name year that is equal to 2015
+//The condition is that the year is less than or equal 2100
+//The incrmentation should be the year counting up in ones
+for (var year = 2015; year <= 2100 ; year++) {	
+//If the conditions are true - run the following
+	//Create a variable named "d" and assign it the current date(year, 0,  1)
+	var d = new Date(year, 0, 1);
+	//if d.getday() is equal to 0
+	if (d.getDay() === 0) 
+		document.write("1st of January starts on a sunday in year" + year + "<br />")
+	} //d.get day
+	</script>
+
+	//print the following to the screen - "1st of January starts on a sunday in year "year"
+<!--<img src="images/years.PNG" />
+</body>
+</html>
+

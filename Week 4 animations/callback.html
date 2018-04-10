@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+//Create a function that will ensure your code loads after the webpage
+$(document).ready(function(e) {
+//Select the button tag and apply the click event method
+	$("button").click(function(){
+	//Select the paragraph tag and hide it at a speed of 1,000 milliseconds
+		$("p").hide(1000, function(){
+	//Create an alert that says - "The paragraph is now hidden"
+	alert("The paragraph is now hidden");
+	var abc = document.write('<h1 id="fool">' + "The plan worked " + '</h1>');
+	$("h1").animate( {'margin-left':'40%','opacitty':'0.7'},3000).animate( {'margin-top':'25%'},4000).fadeTo(1000, function () {
+	
+			document.getElementById("fool").innerHTML = "You FOOOOOOOL!!!",
+			$(abc).fadeIn(1000);
+			
+	});
+		});
+	});
+});
+</script>
+
+</head>
+<body>
+
+<!--Create a button with the value of "hide"-->
+<button name="hide">Click Me</button>
+<!--Create a paragraph of placeholder text-->
+<p>text</p>
+</body>
+</html>

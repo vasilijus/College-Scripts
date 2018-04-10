@@ -1,0 +1,150 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<title>Car insurance</title>
+<style>
+body{
+	font-family:"Century Gothic", Verdana, Geneva, sans-serif;
+	color:#333;
+}
+</style>
+</head>
+
+<body>
+<script type="text/javascript">
+//Create a new array containing 12 variables with the months of the year as the values
+var monthSelection = new Array("January","February","March","April","May","June","July","August","September","October","November","December");
+
+
+//Create a new array containing 9 variables with the following values
+//Fiat, Alfa Romeo, Ford, Volkswagen, Toyota, Volvo, Renault, Peugeot and Vauxhall
+var carSelection = new Array();
+carSelection[0] = "Fiat";
+carSelection[1] = "Alfa Romeo";
+carSelection[2] = "Ford";
+carSelection[3] = "Vo;lswagen";
+carSelection[4] = "Toyota";
+carSelection[5] = "Volvo";
+carSelection[6] = "Renault";
+carSelection[7] = "Peugeot";
+carSelection[8] = "Vauxhall";
+
+
+document.write('<form name="valForm">');
+document.write('<h1>Car Insurance form</h1><br/>');
+document.write('Please Enter Your name*<br/>');
+document.write('<input placeholder="Forename" type="text" maxlength="15" name="forename" id="forename"/><br/>');
+document.write('<input placeholder="Surname" type="text" maxlength="15" name="surname" id="surname"/><br/><br/>');
+
+document.write('Please Enter Address*<br/>');
+document.write('<input placeholder="House number" min="0" type="number" maxlength="4" id="housenumber"/><br/>');
+document.write('<input placeholder="Street" maxlength="15" id="street"/><br/>');
+document.write('<input placeholder="City" maxlength="15" id="city"/><br/>');
+document.write('<input placeholder="County" maxlength="15" id="county"/><br/><br/>');
+document.write('Please Enter Date of Birth<br/>');
+
+
+//Create a Select Menu that will count the days of the month
+document.write('<select name="day" id="day">');
+z = 1;
+while (z <= 31) {
+	document.write('<option value=' + z + '>' + z + '</option>'); z++;
+}
+document.write('</select>');
+
+//Create a Select Menu that will display the Months of the Year
+document.write('<select name="months" id="month">');
+x = 0;
+while ( x <= 11) {
+	document.write('<option value=' + x + '>' + monthSelection[x] + '</option>'); x++;
+}
+document.write('</select>');
+
+//Create a Select Menu that will display the years 1930 - 2014
+document.write('<select name="year" id="year">');
+c = 1930;
+while (c <= 2014) {
+	document.write('<option value='+ c +'>' + c + '</option>'); c++;
+} 
+document.write('</select>');
+document.write('<br />');
+document.write('Please Select Manufacturer<br/>');
+
+//Creat a Select Menu that will display the car manufacturers Array you created earlier
+//Use the array_Name.sort() function to sort the names alphabetically 
+document.write('<select name="carModel">');
+car = 0;
+while (car <=8 ) {
+	document.write('<option value=' + car +'>' + carSelection.sort()[car] + '</option>');
+	car++;
+}
+document.write('</select>');
+document.write('<br />');
+
+
+document.write('Please Enter Annual Mileage<br/>');
+document.write('<input placeholder="Mileage" min="0" type="number" maxlength="7" id="mileage"/><br/><br/>');
+
+document.write('Please Select No Claims Discount (1,2 or 3 years)*<br/>');
+document.write('<input id="ncd" name="ncd" type="number" placeholder="NCD" min="1" max="3" maxlength="1" />'+'<br/>');
+document.write('<br/>');
+document.write('<input type="button" value="Submit Details" onclick="noclaims(); validate()"/>');
+document.write('</form>');
+function noclaims(){
+	var n=ncd.value;
+		var year=document.getElementById("year").value;
+		var now = new Date().getFullYear();
+		var age=now-year;
+	
+		if (age<17) {
+		alert(age+" You\'re not old enough to drive!")
+		}else{
+//else - Create a Switch statement that will print the following depending on selected no claim discount
+	switch ( n ){
+		case "1" :
+alert( n + " year no claims discount will cost: £356 per annum if 1 years");
+break;
+	case "2":
+alert(n + " year no claims discount will cost: £256 per annum if 2 years");
+break;
+	case "3":
+alert(n + " year no claims discount will cost: £156 per annum if 3 years");
+break;
+	} //switch
+		} //else
+
+}// No Claims
+
+
+
+//Finally add Form Validation to the fields with an Asterisk*
+//Create a Function
+function validate() {
+
+//Create a variable that will gather this information - 
+var xfn = document.forms["valForm"]["forename"].value;
+//Create an IF statement that will find out if the inputs are empty -
+if (xfn==null || xfn=="") {
+//If the inputs ares empty, send the user this message -
+ alert("Please tell us your First Name");
+//Don't forget to - 
+return false;
+}
+
+var xln = document.forms["valForm"]["surname"].value;
+if (xln == null || xln == "") {
+	alert("Insert Surname");
+	return false;
+}
+
+var xad = document.forms["valForm"]["address"].value;
+if (xad == null || xad == ""){
+	alert("Enter your address");
+	return false;
+}
+
+} // Validate
+</script>
+
+
+</body></html>
